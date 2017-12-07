@@ -25,7 +25,7 @@ class Application
   end
 
   def found_item(item)
-    @@items.each do |i|    
+    @@items.each do |i|
       if item == i.name
         return i
       end
