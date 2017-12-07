@@ -10,7 +10,6 @@ class Application
     if req.path.include?("/items/")
       item = req.path.split("/items/").last
       f_item = found_item(item)
-      resp.write "item = #{item}"
       if f_item
         resp.write "Price for #{f_item.name} is #{f_item.price}"
       else
@@ -27,6 +26,7 @@ class Application
 
   def found_item(item)
     @@items.each do |i|
+      resp.write resp.write "item = #{item} and i.name = #{i.name}\n"
       if item == i.name
         i
       end
