@@ -28,7 +28,7 @@ class Application
     @@items.each do |i|
       resp.write resp.write "item = #{item} and i.name = #{i.name}\n"
       if item == i.name
-        i
+        return i
       end
     end
     return nil
