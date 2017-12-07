@@ -9,7 +9,7 @@ class Application
 
     if req.path.include?("/items/")
       item = req.path.split("/items/").last
-      f_item = found_item(item, resp)
+      f_item = found_item(item)
       if f_item
         resp.write "Price for #{f_item.name} is #{f_item.price}"
       else
