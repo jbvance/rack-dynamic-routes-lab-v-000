@@ -1,3 +1,5 @@
+require 'pry'
+
 class Application
 
   @@items = []
@@ -9,6 +11,7 @@ class Application
     if req.path.include?("/items/")
       item = req.path.split("/items/").last
       f_item = found_item(item)
+      binding.pry
       if f_item
         resp.write "Price for #{f_item.name} is #{f_item.price}"
       else
