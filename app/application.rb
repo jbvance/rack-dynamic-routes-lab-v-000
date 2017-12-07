@@ -24,9 +24,8 @@ class Application
     resp.finish
   end
 
-  def found_item(item, resp)
-    @@items.each do |i|
-      resp.write resp.write "item = #{item} and i.name = #{i.name}\n"
+  def found_item(item)
+    @@items.each do |i|    
       if item == i.name
         return i
       end
